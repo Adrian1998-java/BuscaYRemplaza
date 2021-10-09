@@ -8,7 +8,10 @@ import javafx.scene.control.CheckBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.ColumnConstraints;
 import javafx.scene.layout.GridPane;
+import javafx.scene.layout.Priority;
+import javafx.scene.layout.RowConstraints;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
@@ -75,6 +78,34 @@ public class BuscaYRemplaza extends Application {
 		FormerPane.add(buscaAtrasCheck, 2, 2);
 		FormerPane.add(expresionCheck, 1, 3);
 		FormerPane.add(resaltaResultCheck, 2, 3);
+		
+		//Restricciones de columnas
+		ColumnConstraints [] cols = {
+				new ColumnConstraints(),
+				new ColumnConstraints(),
+				new ColumnConstraints(),
+			};
+		FormerPane.getColumnConstraints().setAll(cols);
+		
+		//col 0
+		cols[0].setHgrow(Priority.NEVER);
+		//col 1
+		cols[1].setHgrow(Priority.ALWAYS);
+		cols[1].setFillWidth(true);
+		//col 2
+		cols[2].setHgrow(Priority.ALWAYS);
+		cols[2].setFillWidth(true);
+		
+//		//Normas de filas
+//		RowConstraints [] rows = {
+//				new RowConstraints(),	
+//				new RowConstraints(),	
+//				new RowConstraints(),	
+//				new RowConstraints(),	
+//			};
+//		FormerPane.getRowConstraints().setAll(rows);
+//		
+//		rows[0].setVgrow(null);
 		
 		//Inicializamos el BordePane root
 		BorderPane root = new BorderPane();
