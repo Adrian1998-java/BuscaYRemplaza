@@ -38,6 +38,12 @@ public class BuscaYRemplaza extends Application {
 		buscarText = new TextField();
 		remplazarText = new TextField();
 		
+		//Inicializamos Checkboxes
+		mayuMinuCheck = new CheckBox("Mayúsculas y minúsculas");
+		buscaAtrasCheck = new CheckBox("Buscar hacia atrás");
+		expresionCheck = new CheckBox("Expresión regular");
+		resaltaResultCheck = new CheckBox("Resaltar resultados");
+		
 		//Inicializamos botones
 		buscarButton = new Button("Buscar");
 		buscarButton.setMaxWidth(Double.MAX_VALUE);
@@ -65,6 +71,10 @@ public class BuscaYRemplaza extends Application {
 		FormerPane.setVgap(5);
 		FormerPane.addRow(0, new Label("Buscar: "), buscarText);
 		FormerPane.addRow(1, new Label("Remplazar con: "), remplazarText);
+		FormerPane.add(mayuMinuCheck, 1, 2);
+		FormerPane.add(buscaAtrasCheck, 2, 2);
+		FormerPane.add(expresionCheck, 1, 3);
+		FormerPane.add(resaltaResultCheck, 2, 3);
 		
 		//Inicializamos el BordePane root
 		BorderPane root = new BorderPane();
