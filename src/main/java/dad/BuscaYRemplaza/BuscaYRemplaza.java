@@ -84,6 +84,7 @@ public class BuscaYRemplaza extends Application {
 				new ColumnConstraints(),
 				new ColumnConstraints(),
 				new ColumnConstraints(),
+				new ColumnConstraints(),
 			};
 		FormerPane.getColumnConstraints().setAll(cols);
 		
@@ -95,8 +96,10 @@ public class BuscaYRemplaza extends Application {
 		cols[2].setHgrow(Priority.ALWAYS);
 		cols[2].setFillWidth(true);
 		
-		GridPane.setColumnSpan(buscarText, 2);
-		GridPane.setColumnSpan(remplazarText, 2);
+		GridPane.setColumnSpan(buscarText, 3);
+		GridPane.setColumnSpan(remplazarText, 3);
+		GridPane.setHgrow(buscaAtrasCheck, Priority.NEVER);
+		GridPane.setHgrow(resaltaResultCheck, Priority.NEVER);
 		
 //		//Normas de filas
 //		RowConstraints [] rows = {
