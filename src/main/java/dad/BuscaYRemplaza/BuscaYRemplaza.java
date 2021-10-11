@@ -91,10 +91,12 @@ public class BuscaYRemplaza extends Application {
 		cols[0].setHgrow(Priority.NEVER);
 		//col 1
 		cols[1].setHgrow(Priority.ALWAYS);
-		cols[1].setFillWidth(true);
 		//col 2
 		cols[2].setHgrow(Priority.ALWAYS);
 		cols[2].setFillWidth(true);
+		
+		GridPane.setColumnSpan(buscarText, 2);
+		GridPane.setColumnSpan(remplazarText, 2);
 		
 //		//Normas de filas
 //		RowConstraints [] rows = {
